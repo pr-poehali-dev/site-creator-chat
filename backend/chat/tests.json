@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Get all messages",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "skip"
+    },
+    {
+      "name": "Send new message",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "userId": "test-user-123",
+        "username": "Тестовый Пользователь",
+        "messageText": "Привет, это тестовое сообщение!",
+        "isCreator": false
+      },
+      "expectedStatus": 201,
+      "bodyMatcher": "skip"
+    }
+  ]
+}
